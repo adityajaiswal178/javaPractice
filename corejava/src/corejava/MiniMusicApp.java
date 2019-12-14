@@ -1,0 +1,41 @@
+package corejava;
+import javax.sound.midi.*;
+
+public class MiniMusicApp {
+
+    public static void main(String[] args ){
+    	MiniMusicApp mmp=new MiniMusicApp();
+    	mmp.play();
+    }
+
+	public void play() {
+		// TODO Auto-generated method stub
+		try{
+			Sequencer player=MidiSystem.getSequencer();
+			player.open();
+			
+			Sequence seq=new Sequence(Sequence.PPQ, 4);
+			
+			Track track=seq.createTrack();
+			
+			ShortMessage a=new ShortMessage();
+			a.setMessage(144,1,44,100);
+			MidiEvent noteon=new MidiEvent(a, 1);
+			track.add(noteon);
+			
+			ShortMessage b=new ShortMessage();
+			b.setMessage(128,1,44,100);
+			MidiEvent noteOff =new MidiEvent(b, 16);
+			track.add(noteOff);
+			
+			player.setSequence(seq);
+			
+			player.start();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+    
+}
