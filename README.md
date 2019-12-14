@@ -4,9 +4,9 @@ One Paragraph of project description goes here
 
 ## Getting Started
 
-This is Spring MVC framework project using Maven build.
-TestNG framework is used for testing.
-Jacoco plugin is used for code coverage.
+* This is Spring MVC framework project using Maven build.
+* TestNG framework is used for testing.
+* Jacoco plugin is used for code coverage.
 
 ### Prerequisites
 
@@ -20,9 +20,9 @@ STS/Eclipse IDE
 
 ## Running the tests
 
-Complete setup of this project in your IDE and then download TestNG plugin from Eclipse Market Place
-To run the test case 
-right click on project> run configuaration> TestNG> select project> Run
+* Complete setup of this project in your IDE and then download TestNG plugin from Eclipse Market Place
+* To run the test case 
+* right click on project> run configuaration> TestNG> select project> Run
 Note: Use Java 7 to run the test case
 
 
